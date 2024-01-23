@@ -18,7 +18,7 @@ int isFull(){
 void enqueue(int item){
     if(isFull()){
         printf("Full Queue!");
-        return;
+        exit(EXIT_FAILURE);
     }
     if(isEmpty()){
         tail=0;
@@ -27,15 +27,17 @@ void enqueue(int item){
     queue[head] = item; 
 };
 
-void dequeue(){
+int dequeue(){
     int item
     if(isEmpty()){
         printf("Empty!");
+        exit(EXIT_FAILURE);
         
     }else{
         item = queue[head];
         head++;
     }
+    return item;
 }
 
 int main(){
