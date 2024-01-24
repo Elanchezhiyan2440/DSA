@@ -8,11 +8,11 @@ int head = -1;
 int tail = -1;
 
 int isEmpty(){
-    return front = -1;
+    return head = -1;
 };
 
 int isFull(){
-    return rear = MAX_LENGTH-1;
+    return tail = MAX_LENGTH-1;
 };
 
 void enqueue(int item){
@@ -28,7 +28,7 @@ void enqueue(int item){
 };
 
 int dequeue(){
-    int item
+    int item;
     if(isEmpty()){
         printf("Empty!");
         exit(EXIT_FAILURE);
